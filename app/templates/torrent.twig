@@ -1,0 +1,17 @@
+<strong class="title">{{ name }}</strong>
+
+<div class='{{ progress_type }}'>
+	<div class="bar bar-success" style="width: {{ uploaded }}%"></div>
+	<div class="bar bar-info" style="width: {{ downloaded }}%"></div>
+</div>
+<div class='row-fluid'>
+	<div class='start-stop span3'>
+		<button class='btn btn-small transmission'>{{ button_label }}</button>
+	</div>
+	<div class='remove span6 text-right'>
+		<button class='btn btn-small remove {{remove_button_class}}'>REMOVE</button>
+	</div>
+	<div class='delete span1 text-right'>
+		<button class='btn btn-small btn-danger delete {{delete_button_class}}'>DELETE</button>
+	</div>
+</div>

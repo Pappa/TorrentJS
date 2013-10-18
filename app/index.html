@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>TorrentJS</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/main.css">
+
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script>window.html5 || document.write('<script src="/js/vendor/html5shiv.js"><\/script>')</script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<!-- dependencies -->
+		<script src="//code.jquery.com/jquery-latest.min.js"></script>
+		<script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore.js"></script>
+		<script>window._ || document.write('<script src="/js/vendor/underscore.js"><\/script>')</script>
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.10/backbone-min.js"></script>
+		<script>window.Backbone || document.write('<script src="/js/vendor/backbone-min.js"><\/script>')</script>
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+		<script>window.$.fn.modal || document.write('<script src="/js/vendor/bootstrap.min.js"><\/script>')</script>
+
+		<script src="/js/vendor/twig.min.js"></script>
+
+		<script src="/js/vendor/bootbox.min.js"></script>
+
+		<!-- app -->
+		<script src="/js/TJS.js"></script>
+		<script src="/js/config/TransmissionConfig.js"></script>
+		<script src="/js/util.js"></script>
+		<script src="/js/Events.js"></script>
+		<script src="/js/Router.js"></script>
+
+		<!-- models -->
+		<script src="/js/models/Torrent.js"></script>
+		<script src="/js/models/SearchResult.js"></script>
+		<script src="/js/models/XbmcSources.js"></script>
+		<script src="/js/models/Settings.js"></script>
+
+		<!-- collections -->
+		<script src="/js/collections/Torrents.js"></script>
+		<script src="/js/collections/SearchResults.js"></script>
+
+		<!-- views -->
+		<script src="/js/views/TorrentView.js"></script>
+		<script src="/js/views/TorrentsView.js"></script>
+		<script src="/js/views/SearchResultView.js"></script>
+		<script src="/js/views/SearchResultsView.js"></script>
+		<script src="/js/views/NoResultsView.js"></script>
+		<script src="/js/views/SearchFormView.js"></script>
+		<script src="/js/views/SettingsView.js"></script>
+
+		<script>
+			$(document).ready(function () {
+				TJS.load();
+			});
+		</script>
+
+		<form id="searchForm" name="searchForm">
+			<div class="row-fluid">
+				<div class="span5 offset1">
+						<input type="search" id="searchInput" class="input-small" type="text" placeholder="Search..."/>
+				</div>
+				<div class="span4 text-right">
+						<button class="btn">SEARCH</button>
+				</div>
+				<div class="span1 text-right">
+					<button id="settings" class="btn"><i class="icon-wrench"> </i></button>
+				</div>
+			</div>
+		</form>
+
+		<div id="torrentsRow" class="row-fluid">
+			<div class="span10 offset1">
+
+				<h1>Torrents</h1>
+				<div id="activeTorrents">
+				</div>
+
+			</div>
+		</div>
+
+		<div id="searchResultsRow" class="row-fluid" name="searchResults">
+			<div class="span10 offset1">
+
+				<h1 id="searchResultsTitle">Search Results</h1>
+				<div id="searchResults">
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>
