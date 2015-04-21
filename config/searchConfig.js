@@ -6,33 +6,9 @@ module.exports = {
 
 	sites: [
 		{
-			host: "thepiratebay.se",
+			host: "kickassproxy.nl",
 			port: 80,
-			path: ["/search/", "/0/7/0"],
-			method: "GET"
-		},
-		{
-			host: "tpb.derp.pw",
-			port: 80,
-			path: ["/search/", "/0/7/0"],
-			method: "GET"
-		},
-		{
-			host: "tpb.partipirate.org",
-			port: 80,
-			path: ["/search/", "/0/7/0"],
-			method: "GET"
-		},
-		{
-			host: "kat.ph",
-			port: 80,
-			path: ["/usearch/", "/?field=seeders&sorder=desc"],
-			method: "GET"
-		},
-		{
-			host: "tpb.pirates.ie",
-			port: 80,
-			path: ["/search/", "/0/7/0"],
+			path: ["/usearch/", "/"],
 			method: "GET"
 		}
 	]
